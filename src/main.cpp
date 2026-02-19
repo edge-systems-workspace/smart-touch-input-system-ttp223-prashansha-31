@@ -26,3 +26,17 @@ void setup() {
     pinMode(touchPin, INPUT);
     Serial.println("=== TTP223 Touch Detection System Initialized ===");
 }
+
+/**
+ * @brief Poll the TTP223 sensor and report touch state.
+ *
+ * @details
+ * Reads the digital state from `touchPin`. If the sensor output is
+ * HIGH, prints "Touch Detected"; otherwise prints "No Touch".
+ * The check runs repeatedly with a 300 ms delay between readings.
+ */
+void loop() {
+    touchState = digitalRead(touchPin);
+
+
+}
