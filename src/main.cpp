@@ -13,3 +13,16 @@
 
 const uint8_t touchPin = 2;
 int touchState = 0;
+
+/**
+ * @brief Initialize Serial and touch input.
+ *
+ * @details
+ * Configures the Serial Monitor at 9600 baud and sets the touch
+ * sensor pin mode to INPUT. Prints an initialization banner.
+ */
+void setup() {
+    Serial.begin(9600);
+    pinMode(touchPin, INPUT);
+    Serial.println("=== TTP223 Touch Detection System Initialized ===");
+}
